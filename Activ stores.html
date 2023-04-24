@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Store locator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Jomhuria&family=Noto+Nastaliq+Urdu&family=Reem+Kufi&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Aref+Ruqaa&family=Gulzar&family=Jomhuria&family=Noto+Nastaliq+Urdu&family=Reem+Kufi&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Aref+Ruqaa&family=Gulzar&family=Jomhuria&family=Lateef:wght@200&family=Noto+Nastaliq+Urdu&family=Reem+Kufi&display=swap');
+		
+		body{
+			margin: auto;
+			padding: 1%;
+			text-decoration: none;
+			font-family: 'Ceentury Gothic', sans-serif;
+		}
+
+		a{
+			text-decoration: none;
+			color: black;
+		}
+
+		header {
+			background-color: #ffffff;
+			width: 100%;
+			height: auto;
+			align-items: center;
+			text-align: center;
+			padding: 1% 0;
+			margin-bottom: 1%;
+		}
+
+		.site-logo {
+			text-align: center;
+			padding-bottom: 3%;
+		}
+
+		.site-logo img {
+			width: 80px;
+			height: 64px;
+		}
+
+		.title{
+			text-align: center;
+			font-size: xx-large;
+			font-weight: 600;
+		}
+
+		.search-form {
+			margin: 15px 0;
+			display: flex;
+			align-items: center; 
+			justify-content: center;
+		}
+
+		.search-form i{
+			font-size: 20px;
+			width: 20px;
+			color: #000000;
+		}
+
+		.search-form input{
+			width: 25%;
+			padding: 8px 0px;
+			padding-left: 42px;
+			font-size: 16px;
+			color: #000000;
+			border:none;
+			border-bottom:1px solid black;
+		}
+
+		.search-form input:focus{
+			outline: none;
+		}
+
+		.container{
+			box-sizing:border-box;
+			background-color: #e9e6e6;
+			height: 500px;
+			width: 100%;
+			display: flex;
+		}
+
+		.stores-column{
+			background-color: #e9e6e6;
+			width: 35%;
+			height: 100%;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+
+
+		.store-card{
+			background-color: #ffffff;
+			width: 80%;
+			height: auto;
+			margin: 3% 2%;
+			padding: 5% 7%;
+			font-family: 'Futura PT', sans-serif;
+			font-size: .9rem;
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			border-radius: 5%;
+		}
+
+		.store-card:hover{
+			background-color: #6dcab6;
+		}
+
+		.store-card .location{
+			font-size: 1.3rem;
+			font-weight: 400;
+		}
+
+		.location-arabic{
+			font-family:'Gulzar', serif;
+			padding-left: 25%;
+			font-size: 1.2rem;
+		}
+
+		.store-card .phone{
+			padding-bottom: 4%;
+		}
+
+		.store-card .location-details{
+			padding-bottom: 5%;
+		}
+
+
+		.store-card .VLOM{
+			font-size: 1rem;
+			font-weight: 600;
+		}	
+
+		.arrow{
+			font-weight: 600;
+			font-size: .8rem;
+		}
+
+	</style>
+</head>
+<body>
+
+	<header>
+		<!-- this div will hold logo -->
+		<div class="site-logo">
+			<img src="https://cdn.shopify.com/s/files/1/0522/8504/6984/files/Logo_PNG_4a690e54-10b5-4282-b8c6-86a1d5931b19.png?v=1649543680&width=500" alt="logo" align="center">
+		</div>
+
+		<!-- this div will hold title-->
+		<div class="title">
+			<span>S T O R E  &nbsp; L O C A T O R</span>
+		</div>
+
+	</header>
+
+
+	<!-- this div will hold Search Form-->
+	<div class="search-form">
+		<i class='bx bx-search-alt-2'></i>
+		<input type="text" id="search-form" placeholder="Enter nearst place.....">
+	</div>
+
+
+	<div class="container">
+
+		<!-- here column's div of displaying the stores  -->
+		<div class="stores-column" id="stores-column">
+ 
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.56499876178!2d31.431693474793036!3d30.02064461969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14582335de708375%3A0xb44a4d7ef9e17718!2sCairo%20Medical%20Center%20(CMC)!5e0!3m2!1sen!2seg!4v1682204138457!5m2!1sen!2seg" target="Maps">
+					<p class="location">New Cairo <span class="location-arabic">القاهرة الجديدة</span> </p>
+					<div class="phone">+02 1029998541</div>
+					<div class="location-details">5st settlment - CMC Mall- Nourth 90th Street</div>
+					<a target="_blank" href="https://goo.gl/maps/8yBAdH28CcrAQqap9" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.5311951083649!2d31.347920199602342!3d30.117824450341256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458155a92732bd3%3A0xc914a31d39001ad7!2sActiv%20abou%20alaa!5e0!3m2!1sen!2seg!4v1682265905694!5m2!1sen!2seg" target="Maps">
+					<p class="location">Nadi El Shams<span class="location-arabic" >نادى الشمس</span> </p>
+					<div class="phone">+20 1066002859</div>
+					<div class="location-details">43 Abdelhamid Badawy, In-Front of Nadi El Shams Gate 1</div>
+					<a target="_blank" href="https://goo.gl/maps/2Ez6xetTJ1zTuPQd9" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2184.7655535939743!2d31.4185650192385!3d30.150159585580393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145817ce850cd1e7%3A0x8f43b44cad09c183!2sActiv%20abou%20alaa%20town%20centar!5e0!3m2!1sen!2seg!4v1682266988119!5m2!1sen!2seg" target="Maps">
+					<p class="location">Town Center<span class="location-arabic">السلام- العبور</span> </p>
+					<div class="phone">+20 1011598842</div>
+					<div class="location-details">El-Salam Sharkeya, Al Salam First </div>
+					<a target="_blank" href="https://goo.gl/maps/BRZsTZ1Ra6wVM3qH9" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1049.3434417891021!2d31.155106130845272!3d29.99272062895437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845b8de9f3003%3A0xf5db82ec33eae16f!2sActive!5e0!3m2!1sen!2seg!4v1682267218799!5m2!1sen!2seg" target="Maps">
+					<p class="location">El-Haram<span class="location-arabic">الهرم</span> </p>
+					<div class="phone">+20 1097080665</div>
+					<div class="location-details">116 El-Haram St. Sahl Hamza Station</div>
+					<a target="_blank" href="https://goo.gl/maps/SEZjWi3WM845LwjA8" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.8706586251815!2d31.213188858875423!3d30.038850595541152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847e3d654c0b9%3A0x72999a254daddfb1!2sActive%20Abou%20Alaa!5e0!3m2!1sen!2seg!4v1682267519142!5m2!1sen!2seg" target="Maps">
+					<p class="location">El-Dokki<span class="location-arabic">الدقى</span> </p>
+					<div class="phone">+20 1098858758</div>
+					<div class="location-details">114 El Tahrir, Dokki</div>
+					<a target="_blank" href="https://goo.gl/maps/iVqucijdKGZHuyux7" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.2612912269062!2d31.38284802923353!3d30.092679419874255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145817a997122311%3A0x332e90205e19f8a8!2sActiv%20new%20abou%20alaa%20%2Cwadiddegla!5e0!3m2!1sen!2seg!4v1682267913692!5m2!1sen!2seg" target="Maps">
+					<p class="location">El-Sheraton<span class="location-arabic" >الشيراتون</span> </p>
+					<div class="phone">+20 1063049555</div>
+					<div class="location-details">The District opposite Wadi Degla Club</div>
+					<a target="_blank" href="https://goo.gl/maps/KzQ4RU2qtzau18cM8" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.9909838674467!2d31.320111044411505!3d29.983575554702306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583934bcc8d8c1%3A0x18a19c027ecc0fa8!2sActive!5e0!3m2!1sen!2seg!4v1682269263952!5m2!1sen!2seg" target="Maps">
+					<p class="location">Qattamiya<span class="location-arabic">القطامية</span> </p>
+					<div class="phone">+20 1063869555</div>
+					<div class="location-details">Ring Road Maadi Badr Towers next to Carrefour</div>
+					<a target="_blank" href="https://goo.gl/maps/Q7GQ7eUa3Btv1f3W8" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.94426688515873!2d30.973295554130434!3d30.005047380066866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458576639295953%3A0x9c523b622257d46b!2sCases!5e0!3m2!1sen!2seg!4v1682269598012!5m2!1sen!2seg" target="Maps">
+					<p class="location">Mall of Arabia<span class="location-arabic">مول العرب</span> </p>
+					<div class="phone">+20 1008551105</div>
+					<div class="location-details">Mall of Arabia - Gate 2</div>
+					<a target="_blank" href="https://goo.gl/maps/8mZneoF3oZkz2dLy5" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.82070179205778!2d31.195352987553676!3d30.06177270250239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458413be80d13b1%3A0x8e1c73dd11deb447!2sSidnawy!5e0!3m2!1sen!2seg!4v1682269918156!5m2!1sen!2seg" target="Maps">
+					<p class="location">Mohandsin<span class="location-arabic">المهندسين</span> </p>
+					<div class="phone">+20 1011588748</div>
+					<div class="location-details">27 Sudan St. Sidnawy Mall</div>
+					<a target="_blank" href="https://goo.gl/maps/VK8TXSBEDG94qMfb6" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3132.4614566877517!2d31.33212517505031!3d29.847834828582926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145836a2003331f5%3A0xa86ae502f8366232!2sActive%20Abou%20Alaa!5e0!3m2!1sen!2seg!4v1682271113823!5m2!1sen!2seg" target="Maps">
+					<p class="location">Helwan<span class="location-arabic">حلوان</span> </p>
+					<div class="phone">+20 1023080501</div>
+					<div class="location-details">40A Sherif  Street, Next to MacDonald's</div>
+					<a target="_blank" href="https://goo.gl/maps/B4ofSxfpPDXGLfWP7" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.83804354801373!2d31.328350532854426!3d30.08486444250908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e2300ab832d%3A0xb55855c98c2d60da!2sActiv%20Abu%20Alaa!5e0!3m2!1sen!2seg!4v1682271921564!5m2!1sen!2seg" target="Maps">
+					<p class="location">Heliopolis<span class="location-arabic" >هليوبوليس</span> </p>
+					<div class="phone">+20 1023825511</div>
+					<div class="location-details">88 El Merghany St. Beside Abou Shakra Restaurant</div>
+					<a target="_blank" href="https://goo.gl/maps/cVo2FpkVmDk4KaW38" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.80674184981916!2d31.015112258956698!3d30.84326673852704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7b7b312fbd47f%3A0x41995038b864f501!2sMall%20of%20Tanta!5e0!3m2!1sen!2seg!4v1682272346811!5m2!1sen!2seg" target="Maps">
+					<p class="location">Tanta<span class="location-arabic">طنطا</span> </p>
+					<div class="phone">+20 1060888102</div>
+					<div class="location-details">Tanta Mall - Near by serbay station</div>
+					<a target="_blank" href="https://goo.gl/maps/mEzTYTmcFvj6RKHT8" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.31252157234337!2d31.771084970276114!3d30.29405180000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457fdbca1426fc3%3A0xb1d8c67a7d53d0d4!2zVGhlIE91dGxldCAtINin2YTYudin2LTYsSDZhdmGINix2YXYttin2YY!5e0!3m2!1sen!2seg!4v1682272594098!5m2!1sen!2seg" target="Maps">
+					<p class="location" style= "font-size:1.1rem;">10th of Ramadan City<span class="location-arabic" style="font-size: 1rem;padding-left: 10%;">العاشر من رمضان</span> </p>
+					<div class="phone">+20 1030018655</div>
+					<div class="location-details">Outlet Mall</div>
+					<a target="_blank" href="https://goo.gl/maps/4BXMefkCWVGkoxhk8" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="#" target="Maps">
+					<p class="location">Ismailia<span class="location-arabic">الاسماعيلية</span> </p>
+					<div class="phone">+20 1028230328</div>
+					<div class="location-details">Next to the Ismaily Club Wall</div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.513598985985!2d32.27067757425822!3d30.59127352231985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f85996fcc09d5d%3A0x23e650c42232a027!2sActiv%20Abo%20Alaa!5e0!3m2!1sen!2seg!4v1682274042563!5m2!1sen!2seg" target="Maps">
+					<p class="location">Ismailia - Marseille<span class="location-arabic">الاسماعيلية</span> </p>
+					<div class="phone">+20 1000576860</div>
+					<div class="location-details">Marseille St. behind the Old Governorate Building</div>
+					<a target="_blank" href="https://goo.gl/maps/wm2AjnkRGk9pYyhy8" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d858.6274047191639!2d32.267937395165866!3d30.591385833384034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f8595772128edb%3A0x8381e29d79f4fdbc!2sActiv%20Aboualaa!5e0!3m2!1sen!2seg!4v1682274245824!5m2!1sen!2seg" target="Maps">
+					<p class="location">Ismailia - Tahrir<span class="location-arabic" >الاسماعيلية</span> </p>
+					<div class="phone">+20 1015042554</div>
+					<div class="location-details">121 Tahrir St.</div>
+					<a target="_blank" href="https://goo.gl/maps/GNmgxfJXb34CkRm48" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="#" target="Maps">
+					<p class="location">Bani Sweif<span class="location-arabic" >بنى سويف</span> </p>
+					<div class="phone">+20 1000579398</div>
+					<div class="location-details">El Harith Square, Sporting St.</div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d649.4737756959169!2d31.35433889846725!3d31.045996984588253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79e787c55b6bb%3A0xb2161cf08956f095!2sActiv%20Abou%20Alaa!5e0!3m2!1sen!2seg!4v1682275172826!5m2!1sen!2seg" target="Maps">
+					<p class="location">El-Mansoura<span class="location-arabic">المنصورة</span> </p>
+					<div class="phone">+20 1012001670</div>
+					<div class="location-details">University District - University Mall Plaza</div>
+					<a target="_blank" href="https://goo.gl/maps/X2HoVZ4TtBL372SN7" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.1631382171863!2d31.180810875165424!3d27.182608948440308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14450b4045b50485%3A0xae63ccf465263d60!2z2KfZg9iq2YEg2KfYqNmI2LnZhNin2KE!5e0!3m2!1sen!2seg!4v1682275511729!5m2!1sen!2seg" target="Maps">
+					<p class="location">Asyut<span class="location-arabic">اسيوط</span> </p>
+					<div class="phone">+20 1023362422</div>
+					<div class="location-details">33 Azhar University St. corner of Al Mashtal Tower Abuhashish Tower</div>
+					<a target="_blank" href="https://goo.gl/maps/nQR3rGSdkqwrh2oN8" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.556860910409!2d31.69366127514542!3d26.56650037488374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x144f5fc448de27d5%3A0x196bf754ab374723!2sActiv%20sohag!5e0!3m2!1sen!2seg!4v1682276105156!5m2!1sen!2seg" target="Maps">
+					<p class="location">Suhag<span class="location-arabic" >سوهاج</span> </p>
+					<div class="phone">+20 1030019866</div>
+					<div class="location-details">1 Abu Musa Al-Ash'ari - From Al-Gomhoria Street</div>
+					<a target="_blank" href="https://goo.gl/maps/xxu5ce8iSXhhgwyu5" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>	
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.8182835021!2d32.72563461097499!3d26.161115631827766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x144eb72a69235ef9%3A0x83ffb444db0cf63!2zQWwgS2FtYWwgTWFsbCAtINin2YTZg9mF2KfZhCDZhdmI2YQ!5e0!3m2!1sen!2seg!4v1682276511166!5m2!1sen!2seg" target="Maps">
+					<p class="location">Qena<span class="location-arabic">قنا</span> </p>
+					<div class="phone">+20 1032301008</div>
+					<div class="location-details">Al Kamal Mall - El-Gameel Street</div>
+					<a target="_blank" href="https://goo.gl/maps/CL5r6FLayYZ956Fn7" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>	
+
+			<div class="store-card">
+				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8778067191015!2d31.81130247531545!3d31.41749255221823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f9eff5f6321a9d%3A0x1733be554870f4ef!2z2KfZg9iq2YrZgSDYp9io2Ygg2LnZhNin2KE!5e0!3m2!1sen!2seg!4v1682276666164!5m2!1sen!2seg" target="Maps">
+					<p class="location">Damietta<span class="location-arabic">دمياط</span> </p>
+					<div class="phone">+20 1029998547</div>
+					<div class="location-details">El Galaa St. in front of Bank El Qahira</div>
+					<a target="_blank" href="https://goo.gl/maps/TY4wqWZc7iT2x9mR6" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>		
+
+			<div class="store-card">
+				<a href="#" target="Maps">
+					<p class="location">Kafr el-Dawar<span class="location-arabic">كفر الدوار</span> </p>
+					<div class="phone">+20 1061615988</div>
+					<div class="location-details">Entrance of kafr el-dawar -IN front of elomda caffe - beside elzaqam for cars </div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>	
+
+			<div class="store-card">
+				<a href="#" target="Maps">
+					<p class="location">Luxor<span class="location-arabic">الاقصر</span> </p>
+					<div class="phone">+20 1015337596</div>
+					<div class="location-details">27 saad zaghlol St. In front of train station</div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <span class="arrow">></span></a>
+				</a>
+			</div>	
+
+			<div class="store-card">
+				<a href="#" target="Maps">
+					<p class="location">Port Said - Al Togari<span class="location-arabic" style="padding-left: 10%;">بورسعيد</span> </p>
+					<div class="phone">+02 0663330380</div>
+					<div class="location-details">First of Al Togari St. nd Toulon</div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>	
+
+			<div class="store-card">
+				<a href="#" target="Maps">
+					<p class="location">Port Said - Zamzam<span class="location-arabic" >بورسعيد</span> </p>
+					<div class="phone">+20 1090499905</div>
+					<div class="location-details">Zamzam Tower - Saad Zaghloul St.</div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>	
+
+			<div class="store-card">
+				<a href="#" target="Maps">
+					<p class="location">Port Said - El Geish<span class="location-arabic" >بورسعيد</span> </p>
+					<div class="phone">+20 1090499906</div>
+					<div class="location-details">El Geish St. </div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>	
+
+			<div class="store-card">
+				<a href="#000000" target="Maps">
+					<p class="location" style="font-size:1.3rem;">Port Said - Alfa Moda<span class="location-arabic" style="padding-left: 10%;">بورسعيد</span> </p>
+					<div class="phone">+20 1011647228</div>
+					<div class="location-details">Alfa Moda talateny street.After mohamed Ali Station </div>
+					<a target="_blank" href="#" class="VLOM" >View location on map &nbsp; <SPan class="arrow">></SPan></a>
+				</a>
+			</div>	
+
+		</div>
+
+		
+		<!-- here div for displaying location on maps  -->
+		<iframe name="Maps" src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="yes" seamless></iframe>
+	
+	
+	</div>
+	
+
+
+
+
+	<!-- here script for search form  -->
+	<script>
+		let searchForm = document.getElementById('search-form');
+		let searchResultList = document.querySelectorAll('.store-card');
+		let result = document.getElementById('stores-column');
+		let searchValue = result.getElementsByTagName("p");
+
+
+    searchForm.addEventListener("keyup", function(){
+        for(var i=0; i< searchValue.length; i++){
+            
+            console.log(searchForm.value);
+           
+            let value = searchResultList[i].getElementsByTagName('p')[0];
+            
+               let filterValue = value.textContent || value.innerHTML;
+
+               if(filterValue.toUpperCase().indexOf(searchForm.value.toUpperCase()) > -1){
+                searchResultList[i].style.display = "";
+               }
+               else{
+                searchResultList[i].style.display="none";
+               }
+        }
+    })
+	</script>
+
+
+
+</body>
+</html>
